@@ -1,0 +1,90 @@
+
+@font-face
+    font-family: 'Ubuntu'
+    src: url('../fonts/Ubuntu-Regular.woff2')
+    font-weight: 400
+    font-style: normal
+    display: swap
+@font-face
+    font-family: 'Ubuntu'
+    src: url('../fonts/Ubuntu-Medium.woff2')
+    font-weight: 500
+    font-style: normal
+    display: swap
+@font-face
+    font-family: 'Ubuntu'
+    src: url('../fonts/Ubuntu-Bold.woff2')
+    font-weight: 700
+    font-style: normal
+    display: swap
+
+
+*, *::after, *::before
+    box-sizing: border-box
+
+*::after, *::before
+    position: absolute
+
+:where(ul, ol):where([class]) 
+  padding-left: 0
+
+body, figure[class], blockquote[class]
+    margin: 0
+
+:where(a[class])
+    text-decoration: none
+    color: inherit
+
+:where(h1, h2, h3, h4, h5, h6, p, ul, ol, dl):where([class])
+    margin-block: 0 
+
+:where(h1, h2, h3, h4, h5, h6):where([class])
+    font-size: inherit
+    font-weight: inherit
+
+:where(dd[class])
+  margin-left: 0
+
+
+:where(ul[class]) 
+  list-style: none
+
+img
+    display: block
+    max-width: 100%
+
+input, textarea, select, button
+    font: inherit
+    border: none
+    outline: none
+    color: inherit
+
+:where(button):where([class])
+    border: none
+    color: inherit
+
+html
+    height: 100%
+    scroll-behavior: smooth
+
+body
+    min-height: 100%
+    font-weight: 400
+    font-family: 'Ubuntu'
+    // color: $font-color-base
+    // font-size: $font-size-s
+
+@media (prefers-reduced-motion: reduce)
+  * 
+    animation-duration: 0.01ms !important
+    animation-iteration-count: 1 !important
+    transition-duration: 0.01ms !important
+    scroll-behavior: auto !important
+  
+
+#app
+    min-height: 100vh
+    overflow: clip
+    display: flex
+    flex-direction: column
+    position: relative
