@@ -1,3 +1,12 @@
+<script setup lang="ts">
+import ContainerLayout from '../components/layout/ContainerLayout.vue'
+
+
+</script>
 <template>
-    Hello, Vue! (Again)
+    <ContainerLayout
+        :max-width="1100"
+    >
+        Hello
+    </ContainerLayout>
 </template>

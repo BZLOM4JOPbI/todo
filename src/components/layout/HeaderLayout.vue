@@ -1,9 +1,16 @@
+<script setup lang="ts">
+import ContainerLayout from './ContainerLayout.vue'
+
+
+</script>
 <template>
     <header class="header">
-        <div class="container">
+        <ContainerLayout
+            :max-width="1100"
+        >
             <div class="header__inner">
                 header
             </div>
-        </div>
+        </ContainerLayout>
     </header>
 </template>
