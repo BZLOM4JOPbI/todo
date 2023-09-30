@@ -14,3 +14,11 @@ import LogoLayout from './LogoLayout.vue'
         </ContainerLayout>
     </header>
 </template>
+<style scoped lang="sass">
+.header__inner
+    display: flex
+    align-items: center
+    justify-content: space-between
+    height: $header-height
+    border-bottom: 1px solid $font-color-black
+</style>

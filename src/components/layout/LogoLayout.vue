@@ -12,8 +12,10 @@ onMounted(async () => {
     <div class="logo">
         <div 
             class="logo__inner"
-            @mouseenter="isLogoLineActive = false"
-            @mouseleave="isLogoLineActive = true"
+            @mouseenter="() => isLogoLineActive = false"
+            @mouseleave="() => isLogoLineActive = true"
+            @dblclick="() => console.log('dblclick')"
+            @click="() => console.log('click')"
         >
             TODO
             <div 
@@ -30,10 +32,10 @@ onMounted(async () => {
     display: inline-block
 .logo__inner
     user-select: none
-    font-size: 30px
+    font-size: $font-size-l
     letter-spacing: 0.3em
     position: relative
-    color: black
+    color: $font-color-black
     margin-left: 10%
 .logo__line
     transition: width .6s ease-in
