@@ -6,10 +6,12 @@ const props = defineProps<{
     maxWidth: number
 }>()
 
-const maxWidthStyle = computed(() => `max-width: ${props.maxWidth}px`)
+const maxWidthStyle = computed(() => { 
+    return { maxWidth: `${props.maxWidth}px`, }
+})
 </script>
 <template>
-    <div 
+    <div
         class="container"
         :style="maxWidthStyle"
     >
