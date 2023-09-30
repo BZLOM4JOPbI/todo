@@ -4,40 +4,37 @@ import { onMounted, ref, } from 'vue'
 
 const isLogoLineActive = ref<boolean>(false)
 
-// const handleEnter = (e: MouseEvent) => {
-
-// }
-// const handleLeave = (e: MouseEvent) => {
-
-// }
-
 onMounted(async () => {
     setTimeout(() => isLogoLineActive.value = true)
 })
 </script>
 <template>
-    <div 
-        class="logo"
-        @mouseenter="isLogoLineActive = false"
-        @mouseleave="isLogoLineActive = true"
-    >
-        TODO
+    <div class="logo">
         <div 
-            class="logo__line"
-            :class="{
-                'logo__line_active' : isLogoLineActive
-            }"
-        ></div>
+            class="logo__inner"
+            @mouseenter="isLogoLineActive = false"
+            @mouseleave="isLogoLineActive = true"
+        >
+            TODO
+            <div 
+                class="logo__line"
+                :class="{
+                    'logo__line_active' : isLogoLineActive
+                }"
+            ></div>
+        </div>
     </div>
 </template>
 <style scoped lang="sass">
 .logo
+    display: inline-block
+.logo__inner
     user-select: none
     font-size: 30px
     letter-spacing: 0.3em
     position: relative
-    display: inline-block
     color: black
+    margin-left: 10%
 .logo__line
     transition: width .6s ease-in
     position: absolute
