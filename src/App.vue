@@ -6,9 +6,12 @@ import { useUserStore, } from '@/stores/user'
 
 const userStore = useUserStore()
 
-userStore.getUserId()
+await userStore.getUserId()
     .then(res => console.log(res))
     .catch(err => console.error(err))
+
+await userStore.getTask()
+    .then(res => console.log(res))
 </script>
 
 <template>

@@ -16,5 +16,13 @@ export const useUserStore = defineStore('user', () => {
         return result
     }
 
-    return { getUserId, }
+    async function getTask() {
+        const result = await instance({
+            method: 'GET',
+            url: '/task/get-tasks',
+            withCredentials: true,
+        })
+    }
+
+    return { getUserId, getTask, }
 })
