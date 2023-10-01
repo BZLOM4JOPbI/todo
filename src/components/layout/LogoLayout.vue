@@ -38,7 +38,7 @@ onMounted(async () => {
     color: $font-color-black
     margin-left: 10%
 .logo__line
-    transition: width .6s ease-in
+    transition: width .5s ease-in
     position: absolute
     left: -10%
     top: 50%
