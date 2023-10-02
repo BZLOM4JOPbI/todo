@@ -6,12 +6,26 @@ import { useUserStore, } from '@/stores/user'
 
 const userStore = useUserStore()
 
-await userStore.getUserId()
-    .then(res => console.log(res))
-    .catch(err => console.error(err))
+const currentUrl = window.location
 
-await userStore.getTask()
-    .then(res => console.log(res))
+// if (currentUrl.hostname !== 'localhost') {
+
+// } else {
+//     document.cookie='user_id=2f22463a-dcd6-4885-a95a-652676d8d88c; Max-Age=1000000000; Path=/; SameSite=None'
+// }
+
+
+console.log(document.cookie)
+try {
+    await userStore.getUserId()
+        .then(res => console.log(res))
+        .catch(err => console.error(err))
+    await userStore.getTask()
+        .then(res => console.log(res))
+} catch(err) {
+    //
+}
+
 </script>
 
 <template>
