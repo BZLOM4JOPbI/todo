@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import ContainerLayout from '../components/layout/ContainerLayout.vue'
 import TaskBase from '@/components/task/TaskBase.vue'
-import ButtonCreate from '@/components/ButtonCreate.vue';
+import ButtonCreate from '@/components/ButtonCreate.vue'
 
 
 </script>

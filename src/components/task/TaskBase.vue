@@ -29,7 +29,7 @@ const handleDelete = () => {
 <style scoped lang="sass">
 .task
     box-shadow: 0px 0px 5px rgb(0 0 0 / 0.2)
-    border-radius: 2px
+    border-radius: $radius
     padding: 10px
 .task__inner
     display: flex

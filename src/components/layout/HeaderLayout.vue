@@ -20,5 +20,5 @@ import LogoLayout from './LogoLayout.vue'
     align-items: center
     justify-content: space-between
     height: $header-height
-    border-bottom: 1px solid $font-color-black
+    border-bottom: 1px solid $black
 </style>

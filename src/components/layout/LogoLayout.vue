@@ -32,10 +32,10 @@ onMounted(async () => {
     display: inline-block
 .logo__inner
     user-select: none
-    font-size: $font-size-l
+    font-size: $font-size-xl
     letter-spacing: 0.3em
     position: relative
-    color: $font-color-black
+    color: $black
     margin-left: 10%
 .logo__line
     transition: width .5s ease-in
