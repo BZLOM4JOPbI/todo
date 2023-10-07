@@ -4,25 +4,42 @@ import instance from '@/utils/request'
 
 export const useUserStore = defineStore('user', () => {
 
-    // function getApiUrl() {
-    //     return import.meta.env.VITE_API_URL
-    // }
     async function getUserId() {
         const result = await instance({
             method: 'POST',
             url: '/user/create-user',
-            withCredentials: true,
         })
         return result
+    }
+
+    function setUserId(userId: { user_id: string }) {
+        const userIdArr = Object.entries(userId)[0]
+        localStorage.setItem(...userIdArr)
+    }
+
+    function checkUserId() {
+        return !!localStorage.getItem('user_id')
+    }
+
+    async function authorize() {
+        if (checkUserId()) return true
+
+        await getUserId()    
+            .then(res => setUserId(res.data))
+            .catch(err => console.error(err))
+
+        console.log(localStorage.getItem('user_id'))
+
+        return true
     }
 
     async function getTask() {
         const result = await instance({
             method: 'GET',
             url: '/task/get-tasks',
-            withCredentials: true,
         })
+        return result
     }
 
-    return { getUserId, getTask, }
+    return { getTask, authorize, }
 })
