@@ -32,7 +32,6 @@ const isHovered = ref<boolean>(false)
     user-select: none
     box-shadow: 0px 0px 5px rgb(0 0 0 / 0.2)
     transition: border-color .3s
-
 .button_active
     border-color: transparent
 </style>

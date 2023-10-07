@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { RouterView, } from 'vue-router'
-import LayoutBase from './components/layout/LayoutBase.vue'
+import LayoutBase from './components/base/LayoutBase.vue'
 import { useUserStore, } from '@/stores/user'
 import { onMounted, ref, } from 'vue'
 

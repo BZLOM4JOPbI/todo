@@ -1,6 +1,6 @@
 <script setup lang="ts">
-import HeaderLayout from './HeaderLayout.vue'
-import LoadingLayout from './LoadingLayout.vue'
+import HeaderLayout from '../layout/HeaderLayout.vue'
+import LoadingLayout from '../layout/LoadingLayout.vue'
 
 
 defineProps<{

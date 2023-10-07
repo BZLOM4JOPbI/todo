@@ -2,22 +2,44 @@
 import ContainerLayout from '../components/layout/ContainerLayout.vue'
 import TaskBase from '@/components/task/TaskBase.vue'
 import ButtonCreate from '@/components/ButtonCreate.vue'
+import ModalCreate from '@/components/ModalCreate.vue'
+import ButtonBase from '@/components/base/ButtonBase.vue'
+
+import { ref, } from 'vue'
 
 
+const isModalOpen = ref<boolean>(false)
+const handleModalOpen = () => isModalOpen.value = true
+const handleModalClose = () => isModalOpen.value = false
 </script>
 <template>
     <ContainerLayout
         :max-width="1200"
     >
-        <section class="index">
-            <ButtonCreate />
+        <ul class="index">
+            <!-- <ButtonCreate 
+            /> -->
+            <ButtonBase 
+                :height="60"
+                :title="'Create'"
+                @click="handleModalOpen"
+            />
             <TaskBase />
             <TaskBase />
             <TaskBase />
             <TaskBase />
             <TaskBase />
-        </section>
+            <TaskBase />
+            <TaskBase />
+            <TaskBase />
+            <TaskBase />
+            <TaskBase />
+        </ul>
     </ContainerLayout>
+    <ModalCreate 
+        :is-open="isModalOpen"
+        @close="handleModalClose"
+    />
 </template>
 <style scoped lang="sass">
 .index

@@ -9,7 +9,7 @@ const handleDelete = () => {
 }
 </script>
 <template>
-    <div class="task">
+    <li class="task">
         <div class="task__inner">
             <ButtonTask 
                 :img-url="imgPenUrl"
@@ -24,7 +24,7 @@ const handleDelete = () => {
                 :title="'delete'"
             />
         </div>
-    </div>
+    </li>
 </template>
 <style scoped lang="sass">
 .task

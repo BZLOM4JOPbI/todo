@@ -49,7 +49,7 @@ body, figure[class], blockquote[class]
   margin-left: 0
 
 
-:where(ul[class]) 
+:where(ul, ol):where([class])
   list-style: none
 
 img
@@ -62,12 +62,13 @@ input, textarea, select, button
     outline: none
     color: inherit
 
-button
+:where(textarea):where([class])
     padding: 0
 
 :where(button):where([class])
     border: none
     color: inherit
+    padding: 0
 
 html
     height: 100%
@@ -78,8 +79,8 @@ body
     font-weight: 400
     font-family: 'Ubuntu'
     line-height: 1.2
-    // color: $font-color-base
-    // font-size: $font-size-s
+    color: $black
+    font-size: $font-size-s
 
 @media (prefers-reduced-motion: reduce)
   * 
