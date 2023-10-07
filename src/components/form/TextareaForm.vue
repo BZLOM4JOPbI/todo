@@ -43,6 +43,7 @@ const value = computed<string>({
         v-model="value"
         class="textarea" 
         rows="1"
+        placeholder="Enter here"
     ></textarea>
 </template>
 <style scoped lang="sass">

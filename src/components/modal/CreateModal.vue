@@ -4,7 +4,7 @@ import imgCloseUrl from '@/assets/img/xmark.svg'
 import { ref, } from 'vue'
 
 import TextareaForm from '@/components/form/TextareaForm.vue'
-import ButtonBase from './base/ButtonBase.vue'
+import ButtonBase from '../base/ButtonBase.vue'
 
 
 defineProps<{
