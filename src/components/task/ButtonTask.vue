@@ -3,14 +3,21 @@ defineProps<{
     imgUrl: string,
     title: string,
 }>()
+
+// defineEmits<{
+//     click: [],
+// }>()
+// @click="$emit('click')"
 </script>
 <template>
-    <button class="button">
+    <button 
+        class="button"
+        :title="title"
+    >
         <div class="button__inner">
             <div 
                 class="button__img"
                 :style="`background-image: url(${imgUrl})`"
-                :title="title"
             >
             </div>
         </div>
@@ -20,8 +27,8 @@ defineProps<{
 .button
     background-color: transparent
     display: block
-    flex-basis: 40px
-    min-width: 30px
+    flex-basis: 35px
+    min-width: 28px
     cursor: pointer
 
 .button__inner

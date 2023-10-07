@@ -4,6 +4,9 @@ import imgPenUrl from '@/assets/img/pen.svg'
 import imgTrashUrl from '@/assets/img/trash.svg'
 
 
+const handleDelete = () => {
+    console.log('click')
+}
 </script>
 <template>
     <div class="task">
@@ -11,6 +14,7 @@ import imgTrashUrl from '@/assets/img/trash.svg'
             <ButtonTask 
                 :img-url="imgPenUrl"
                 :title="'edit'"
+                @click="handleDelete"
             />
             <div class="task__title">
                 Lorem ipsum dolor, sit amet consectetur adipisicing elit. Earum natus mollitia error reiciendis sed, provident
@@ -33,6 +37,5 @@ import imgTrashUrl from '@/assets/img/trash.svg'
     gap: 10px
 
 .task__title
-    background-color: blue
     flex-grow: 1
 </style>

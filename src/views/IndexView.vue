@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import ContainerLayout from '../components/layout/ContainerLayout.vue'
 import TaskBase from '@/components/task/TaskBase.vue'
+import ButtonCreate from '@/components/ButtonCreate.vue';
 
 
 </script>
@@ -9,6 +10,7 @@ import TaskBase from '@/components/task/TaskBase.vue'
         :max-width="1200"
     >
         <section class="index">
+            <ButtonCreate />
             <TaskBase />
             <TaskBase />
             <TaskBase />
