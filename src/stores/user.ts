@@ -44,7 +44,7 @@ export const useUserStore = defineStore('user', () => {
     async function getTask() {
         const result = await instance({
             method: 'GET',
-            url: '/task/get-tasks',
+            url: `/task/get-tasks?user_id=${localStorage.getItem('user_id')}`,
         })
         return result
     }

@@ -1,38 +1,31 @@
 <script setup lang="ts">
 import TaskBase from './TaskBase.vue'
 import ButtonBase from '../base/ButtonBase.vue'
-import SkeletonTask from './SkeletonTask.vue'
 
 import { useUserStore, } from '@/stores/user'
 
 
 const user = useUserStore()
 
+await user.getTask()
+    .then(res => console.log(res))
+    .catch(err => console.error(err))
+
 </script>
 <template>
    <ul class="task-list">
-        <template v-if="user.isAuth">
-            <ButtonBase 
-                :height="60"
-                :title="'Create'"
-            />
-            <TaskBase 
-                v-for="n in 5" 
-                :key="n"
-            />
-        </template>
-        <template v-else>
-            <SkeletonTask 
-                v-for="n in 6" 
-                :key="n"
-                :height="60"
-            />
-        </template>
+        <ButtonBase 
+            :height="60"
+            :title="'Create'"
+        />
+        <TaskBase 
+            v-for="n in 5" 
+            :key="n"
+        />
    </ul> 
 </template>
 <style scoped lang="sass">
 .task-list
-    padding-block: 50px
     display: flex
     flex-direction: column
     gap: 30px

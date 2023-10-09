@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import LayoutBase from './components/base/LayoutBase.vue'
-import LoadingLayout from './components/layout/LoadingLayout.vue'
 
 import { useUserStore, } from '@/stores/user'
 
@@ -14,16 +13,16 @@ const user = useUserStore()
 
 
 onMounted(async () => {
-    await promise(10000)
+    await promise(1000)
 
-    const authResult = await user.authorize()
-    localStorage.clear()
+    await user.authorize()
+    // localStorage.clear()
 })
 
 </script>
 
 <template>
     <LayoutBase>
-        <RouterView />
+        <RouterView/>
     </LayoutBase>
 </template>
