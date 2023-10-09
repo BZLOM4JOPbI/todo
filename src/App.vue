@@ -23,8 +23,7 @@ onMounted(async () => {
 </script>
 
 <template>
-    <LayoutBase v-if="user.isAuth">
+    <LayoutBase>
         <RouterView />
     </LayoutBase>
-    <LoadingLayout v-else />
 </template>
