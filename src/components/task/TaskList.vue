@@ -1,6 +1,7 @@
 <script setup lang="ts">
 import TaskBase from './TaskBase.vue'
 import ButtonBase from '../base/ButtonBase.vue'
+import SkeletonTask from './SkeletonTask.vue'
 
 import { useUserStore, } from '@/stores/user'
 
@@ -21,7 +22,11 @@ const user = useUserStore()
             />
         </template>
         <template v-else>
-            Loading...
+            <SkeletonTask 
+                v-for="n in 6" 
+                :key="n"
+                :height="60"
+            />
         </template>
    </ul> 
 </template>

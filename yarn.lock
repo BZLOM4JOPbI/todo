@@ -2297,11 +2297,6 @@ vue-router@^4.2.4:
   dependencies:
     "@vue/devtools-api" "^6.5.0"
 
-vue-skeletor@^1.0.6:
-  version "1.0.6"
-  resolved "https://registry.yarnpkg.com/vue-skeletor/-/vue-skeletor-1.0.6.tgz#ec218ee84335cf5cc069ed0c966de2a7e9cbe704"
-  integrity sha512-ER4vHlFSXCW3ixK2DlczUE6CZliHsn4d2TvZ9/26C6Oq8zoyEY23BsqweMPtF8QULSz1+G5m2New1BwKNVOZhQ==
-
 vue-template-compiler@^2.7.14:
   version "2.7.14"
   resolved "https://registry.yarnpkg.com/vue-template-compiler/-/vue-template-compiler-2.7.14.tgz#4545b7dfb88090744c1577ae5ac3f964e61634b1"

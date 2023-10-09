@@ -14,7 +14,7 @@ const user = useUserStore()
 
 
 onMounted(async () => {
-    await promise(1000)
+    await promise(10000)
 
     const authResult = await user.authorize()
     localStorage.clear()
