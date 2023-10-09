@@ -1,14 +1,13 @@
 <script setup lang="ts">
-const props = defineProps<{
-    isShow: boolean
-}>()
+// const props = defineProps<{
+//     isShow: boolean
+// }>()
+// v-if="!isShow"
 </script>
 <template>
     <div 
-        v-if="!isShow"
         class="loading"
     >
-
     </div>
 </template>
 <style scoped lang="sass">

@@ -9,8 +9,6 @@ const resize = (textarea: HTMLTextAreaElement) => {
 const textarea = ref(null)
 
 onMounted(() => {
-    console.log('mount textarea')
-    console.log(textarea.value)
     if (textarea.value) {
         resize(textarea.value)
     }

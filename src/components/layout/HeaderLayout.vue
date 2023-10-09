@@ -2,6 +2,14 @@
 import ContainerLayout from './ContainerLayout.vue'
 import LogoLayout from './LogoLayout.vue'
 
+import { useUserStore, } from '@/stores/user'
+
+
+const user = useUserStore()
+
+const logout = () => {
+    localStorage.clear()
+}
 </script>
 <template>
     <header class="header">
@@ -10,6 +18,11 @@ import LogoLayout from './LogoLayout.vue'
         >
             <div class="header__inner">
                 <LogoLayout />
+                <div
+                    @click="logout"
+                >
+                    {{ user.isAuth }}
+                </div>
             </div>
         </ContainerLayout>
     </header>
