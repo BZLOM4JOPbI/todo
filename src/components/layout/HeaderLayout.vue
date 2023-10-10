@@ -21,7 +21,7 @@ const logout = () => {
                 <div
                     @click="logout"
                 >
-                    {{ user.isAuth }}
+                    {{ user.userId }}
                 </div>
             </div>
         </ContainerLayout>

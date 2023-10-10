@@ -16,7 +16,6 @@ onMounted(() => {
 
 const props = defineProps<{
     modelValue: string,
-    label: string,
 }>()
 const emit = defineEmits<{
     'update:modelValue':  [ value: string, ],
@@ -35,7 +34,6 @@ const value = computed<string>({
 })
 </script>
 <template>
-    <label class="label">{{ label }}</label>
     <textarea 
         ref="textarea"
         v-model="value"
@@ -45,8 +43,6 @@ const value = computed<string>({
     ></textarea>
 </template>
 <style scoped lang="sass">
-.label
-    font-size: $font-size-m
 .textarea
     padding: 10px
     border: 1px solid $black

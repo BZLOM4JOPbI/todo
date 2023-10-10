@@ -20,6 +20,7 @@ export const useUserStore = defineStore('user', () => {
     }
 
     const isAuth = ref(false)
+    const userId = ref<string | null>(null)
     function checkUserId() {
         const res = !!localStorage.getItem('user_id')
         isAuth.value = res
@@ -27,14 +28,20 @@ export const useUserStore = defineStore('user', () => {
     }
 
     async function authorize() {
-        if (checkUserId()) return true
+        if (checkUserId()) {
+            userId.value = localStorage.getItem('user_id')
+            return true
+        }
 
         await getUserId()    
             .then(res => {
                 setUserId(res.data)
-                console.log(checkUserId())
+                userId.value = localStorage.getItem('user_id')
+                checkUserId()
             })
-            .catch(err => console.error(err))
+            .catch(err => {
+                console.error(err)
+            })
 
         console.log(localStorage.getItem('user_id'))
 
@@ -51,5 +58,5 @@ export const useUserStore = defineStore('user', () => {
 
 
 
-    return { getTask, authorize, isAuth, }
+    return { getTask, authorize, isAuth, userId, }
 })
