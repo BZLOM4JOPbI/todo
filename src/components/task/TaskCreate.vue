@@ -32,11 +32,12 @@ const handleCreateAccept = async () => {
     })
         .then(res => {
             console.log(res)
-            // emit('close')
+            emits('reload')
         })
-        .catch(err => console.error(err))
-
-    emits('reload')
+        .catch(err => {
+            console.error(err)
+            emits('close')
+        })
 }
 </script>
 <template>
@@ -63,7 +64,6 @@ const handleCreateAccept = async () => {
 </template>
 <style scoped lang="sass">
 .task
-    box-shadow: 0px 0px 5px rgb(0 0 0 / 0.2)
     border-radius: $radius
     padding: 10px
     z-index: 2

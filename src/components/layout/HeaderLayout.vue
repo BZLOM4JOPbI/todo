@@ -7,9 +7,6 @@ import { useUserStore, } from '@/stores/user'
 
 const user = useUserStore()
 
-const logout = () => {
-    localStorage.clear()
-}
 </script>
 <template>
     <header class="header">
@@ -18,9 +15,7 @@ const logout = () => {
         >
             <div class="header__inner">
                 <LogoLayout />
-                <div
-                    @click="logout"
-                >
+                <div>
                     {{ user.userId }}
                 </div>
             </div>
